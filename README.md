@@ -1,2 +1,1 @@
-# selenium-java-example
-Examples showing how to use the testable-selenium-java module
+Examples showing how to utilize [testable-selenium-java](https://github.com/testable/testable-selenium-java).
