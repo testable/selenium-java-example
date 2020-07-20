@@ -10,7 +10,7 @@
         <dependency>
             <groupId>io.testable</groupId>
             <artifactId>testable-selenium-java</artifactId>
-            <version>0.0.4</version>
+            <version>0.0.9</version>
         </dependency>
     </dependencies>
 </project>
