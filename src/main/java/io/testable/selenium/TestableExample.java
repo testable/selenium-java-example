@@ -20,12 +20,12 @@ public class TestableExample {
         LoggingPreferences logPrefs = new LoggingPreferences();
         logPrefs.enable(LogType.PERFORMANCE, Level.ALL);
         DesiredCapabilities options = DesiredCapabilities.chrome();
-        options.setCapability("goog:loggingPerfs", Collections.singletonMap(LogType.PERFORMANCE, Level.ALL.toString()));
+        options.setCapability("goog:loggingPerfs", Collections.singletonMap(LogType.BROWSER, Level.ALL.toString()));
         WebDriver driver = TestableSelenium.newWebDriver(options);
         driver.get("https://www.google.com");
         TestableSelenium.takeScreenshot(driver, "temp.png");
 
-        LogEntries logEntries = driver.manage().logs().get(LogType.PERFORMANCE);
+        LogEntries logEntries = driver.manage().logs().get(LogType.BROWSER);
         for (LogEntry entry : logEntries) {
             System.out.println(entry.toString());
         }
