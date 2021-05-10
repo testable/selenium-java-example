@@ -19,6 +19,7 @@ public class TestableExample {
         LoggingPreferences logPrefs = new LoggingPreferences();
         logPrefs.enable(LogType.PERFORMANCE, Level.ALL);
         ChromeOptions options = new ChromeOptions();
+        options.setExperimentalOption("w3c", false);
         options.setCapability("goog:loggingPerfs", Collections.singletonMap(LogType.PERFORMANCE, Level.ALL.toString()));
         WebDriver driver = TestableSelenium.newWebDriver(options);
         driver.get("https://www.google.com");
