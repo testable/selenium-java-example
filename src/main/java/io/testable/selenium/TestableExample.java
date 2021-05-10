@@ -6,6 +6,7 @@ import org.openqa.selenium.logging.LogEntries;
 import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.logging.LoggingPreferences;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.Collections;
 import java.util.logging.Level;
@@ -18,8 +19,7 @@ public class TestableExample {
     public static void main(String[] args) {
         LoggingPreferences logPrefs = new LoggingPreferences();
         logPrefs.enable(LogType.PERFORMANCE, Level.ALL);
-        ChromeOptions options = new ChromeOptions();
-        options.setExperimentalOption("w3c", false);
+        DesiredCapabilities options = DesiredCapabilities.chrome();
         options.setCapability("goog:loggingPerfs", Collections.singletonMap(LogType.PERFORMANCE, Level.ALL.toString()));
         WebDriver driver = TestableSelenium.newWebDriver(options);
         driver.get("https://www.google.com");
