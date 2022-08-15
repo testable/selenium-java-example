@@ -15,6 +15,9 @@ dependencies {
 }
 
 application {
-    systemProperties System.getProperties()
     mainClassName = "io.testable.selenium.TestableExample"
+}
+
+run {
+    systemProperties System.getProperties()
 }
