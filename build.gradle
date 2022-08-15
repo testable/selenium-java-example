@@ -2,6 +2,7 @@ group 'io.testable'
 version '0.1.0-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'application'
 
 repositories {
     mavenCentral()
@@ -10,4 +11,8 @@ repositories {
 dependencies {
     implementation 'io.testable:testable-selenium-java:0.0.21'
     testImplementation 'junit:junit:4.13'
+}
+
+application {
+    mainClassName = "io.testable.selenium.TestableExample"
 }
