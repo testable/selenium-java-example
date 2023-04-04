@@ -30,12 +30,7 @@
                             <goal>single</goal>
                         </goals>
                         <configuration>
-                            <executable>java</executable>
-                            <arguments>
-                                <argument>-classpath</argument>
-                                <classpath/>
-                                <argument>io.testable.selenium.TestableExample</argument>
-                            </arguments>
+                            <mainClass>io.testable.selenium.TestableExample</mainClass>
                         </configuration>
                     </execution>
                 </executions>
