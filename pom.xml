@@ -29,16 +29,16 @@
                         <goals>
                             <goal>exec</goal>
                         </goals>
-                        <configuration>
-                            <executable>java</executable>
-                                <arguments>
-                                    <argument>-classpath</argument>
-                                    <classpath/>
-                                    <argument>io.testable.selenium.TestableExample</argument>
-                                </arguments>
-                        </configuration>
                     </execution>
                 </executions>
+                <configuration>
+                    <executable>java</executable>
+                        <arguments>
+                            <argument>-classpath</argument>
+                            <classpath/>
+                            <argument>io.testable.selenium.TestableExample</argument>
+                        </arguments>
+                </configuration>
             </plugin>
         </plugins>
     </build>
