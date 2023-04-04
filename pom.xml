@@ -27,10 +27,15 @@
                 <executions>
                     <execution>
                         <goals>
-                            <goal>java</goal>
+                            <goal>exec</goal>
                         </goals>
                         <configuration>
-                            <mainClass>io.testable.selenium.TestableExample</mainClass>
+                            <executable>java</executable>
+                                <arguments>
+                                    <argument>-classpath</argument>
+                                    <classpath/>
+                                    <argument>io.testable.selenium.TestableExample</argument>
+                                </arguments>
                         </configuration>
                     </execution>
                 </executions>
