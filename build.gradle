@@ -44,3 +44,11 @@ tasks.register('uberTestJar', Jar) {
     from { configurations.testRuntimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
     with jar
 }
+
+application {
+    mainClassName = "io.testable.selenium.TestableExample"
+}
+
+run {
+    systemProperties System.getProperties()
+}
