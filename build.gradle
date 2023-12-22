@@ -45,10 +45,6 @@ tasks.register('uberTestJar', Jar) {
     with jar
 }
 
-application {
-    mainClassName = "io.testable.selenium.TestableExample"
-}
-
 run {
     systemProperties System.getProperties()
 }
